@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: upnpcamera Binding
+Bundle-SymbolicName: org.openhab.binding.upnpcamera;singleton:=true
+Bundle-Vendor: openHAB
+Bundle-Version: 2.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .
+Import-Package: 
+ com.google.common.collect,
+ org.apache.commons.lang,
+ org.eclipse.smarthome.config.core,
+ org.eclipse.smarthome.config.discovery,
+ org.eclipse.smarthome.core.common.registry,
+ org.eclipse.smarthome.core.library.types,
+ org.eclipse.smarthome.core.thing,
+ org.eclipse.smarthome.core.thing.binding,
+ org.eclipse.smarthome.core.types,
+ org.eclipse.smarthome.io.net.http,
+ org.eclipse.smarthome.io.transport.upnp,
+ org.jupnp,
+ org.jupnp.model,
+ org.jupnp.model.meta,
+ org.jupnp.model.types,
+ org.xml.sax,
+ org.xml.sax.helpers,
+ org.openhab.binding.upnpcamera,
+ org.openhab.binding.upnpcamera.handler,
+ org.osgi.service.component;version="1.2.2",
+ org.slf4j
+Service-Component: OSGI-INF/*.xml
+Export-Package: org.openhab.binding.upnpcamera,
+ org.openhab.binding.upnpcamera.handler
+Bundle-ActivationPolicy: lazy

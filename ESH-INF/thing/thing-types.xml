@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="upnpcamera"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+        xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!-- Sample Thing Type -->
+    <thing-type id="camera">
+        <label>Upnp Camera</label>
+        <description>The Upnp Camera represents a discovered Upnp camera</description>
+
+        <channels>
+            <channel id="pan" typeId="zoom-camera"/>
+            <channel id="tilt" typeId="zoom-camera"/>
+            <channel id="zoom" typeId="zoom-camera"/>
+            <channel id="video_url" typeId="zoom-camera"/>
+        </channels>
+    </thing-type>
+
+    <channel-type id="zoom-camera" advanced="true">
+    <item-type>Number</item-type>
+    <label>Zoom</label>
+    <category>Zoom</category>
+    <tags>
+      <tag>zoom</tag>
+    </tags>
+    <state min="0" max="6" step="1" pattern="%d X" readOnly="false">
+    </state>
+</channel-type>
+</thing:thing-descriptions>
