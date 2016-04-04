@@ -60,8 +60,6 @@ public class upnpcameraHandlerFactory extends BaseThingHandlerFactory {
     protected void activate(ComponentContext componentContext) {
         super.activate(componentContext);
         logger.debug("activate upnpcameraHandler");
-        // Dictionary<String, Object> properties = componentContext.getProperties();
-        // opmlUrl = (String) properties.get("opmlUrl");
     };
 
     @Override
